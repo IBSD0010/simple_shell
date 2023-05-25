@@ -27,10 +27,10 @@ char **strs;
 char *str;
 if (!head || !i)
 return (NULL);
-strs = malloc(sizeof(char *) * (i + 1);
+strs = malloc(sizeof(char *) *(i + 1));
 if (!strs)
 return (NULL);
-for (i = 0; node = node->next, i++)
+for (i = 0; (node) = node->next; i++)
 {
 str = malloc(_strlen(node->str) + 1);
 if (!str)

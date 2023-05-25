@@ -11,7 +11,7 @@ int i = 0;
 unsigned long int result = 0;
 if (*s == '+')
 s++; /* TODO: why does this make main return 255? */
-for (i = ; s[i] != '\0'; i++)
+for (i = 0; s[i] != '\0'; i++)
 {
 if (s[i] >= '0' && s[i] <= '9')
 {
@@ -87,7 +87,7 @@ return (count);
 char *convert_number(long int num, int base, int flags)
 {
 static char *array;
-static char buffer[50]
+static char buffer[50];
 char sign = 0;
 char *ptr;
 unsigned long n = num;
@@ -116,7 +116,7 @@ void remove_comments(char *buf)
 {
 int i;
 for (i = 0; buf[i] != '\0'; i++)
-if (buf[i] == '#' && (!i || buf[i - 1] == ''))
+if (buf[i] == '#' && (!i || buf[i - 1] == ' '))
 {
 buf[i] = '\0';
 break;
