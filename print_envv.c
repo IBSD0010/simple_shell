@@ -1,7 +1,7 @@
 #include "shell.h"
 /**
  * print_environment - environ a pointer to an arrays and
- * each array poisnt to string
+ * each array points to string
 */
 void print_environment(void)
 {
